@@ -1,4 +1,4 @@
-# VISUALIQ — AI-Powered Product Intelligence & Visual Commerce Studio
+﻿# VISUALIQ — AI-Powered Product Intelligence & Visual Commerce Studio
 
 ## 🌐 Live Dashboard
 
