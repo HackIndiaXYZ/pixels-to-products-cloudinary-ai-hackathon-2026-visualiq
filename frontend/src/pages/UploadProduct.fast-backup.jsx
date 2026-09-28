@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
+﻿import React, { useRef, useState } from "react";
 import "./UploadProduct.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://visualiq-ai-powered-product-intelligence.onrender.com";
 
 const assetConfig = [
   {
     key: "original",
     name: "Original",
     platform: "MASTER ASSET",
-    size: "1960 × 1960"
+    size: "1960 Ã— 1960"
   },
   {
     key: "optimized",
@@ -20,31 +20,31 @@ const assetConfig = [
     key: "socialSquare",
     name: "Social Square",
     platform: "SOCIAL",
-    size: "1080 × 1080"
+    size: "1080 Ã— 1080"
   },
   {
     key: "socialPortrait",
     name: "Social Portrait",
     platform: "SOCIAL FEED",
-    size: "1080 × 1350"
+    size: "1080 Ã— 1350"
   },
   {
     key: "story",
     name: "Story",
     platform: "MOBILE STORY",
-    size: "1080 × 1920"
+    size: "1080 Ã— 1920"
   },
   {
     key: "websiteHero",
     name: "Website Hero",
     platform: "STOREFRONT",
-    size: "1600 × 900"
+    size: "1600 Ã— 900"
   },
   {
     key: "marketplace",
     name: "Marketplace",
     platform: "COMMERCE",
-    size: "1200 × 1200"
+    size: "1200 Ã— 1200"
   }
 ];
 
@@ -279,25 +279,25 @@ function UploadProduct() {
     {
       label: "Visual Quality",
       value: visualScore?.visualQuality,
-      icon: "✦",
+      icon: "âœ¦",
       className: "purple"
     },
     {
       label: "Brand Potential",
       value: visualScore?.brandPotential,
-      icon: "◆",
+      icon: "â—†",
       className: "pink"
     },
     {
       label: "Social Readiness",
       value: visualScore?.socialReadiness,
-      icon: "◎",
+      icon: "â—Ž",
       className: "cyan"
     },
     {
       label: "Commerce Readiness",
       value: visualScore?.commerceReadiness,
-      icon: "◈",
+      icon: "â—ˆ",
       className: "blue"
     }
   ];
@@ -362,22 +362,22 @@ function UploadProduct() {
         <nav className="sidebar-nav">
 
           <div className="nav-item active">
-            <span>◈</span>
+            <span>â—ˆ</span>
             Product Intelligence
           </div>
 
           <div className="nav-item">
-            <span>✦</span>
+            <span>âœ¦</span>
             Visual Studio
           </div>
 
           <div className="nav-item">
-            <span>◉</span>
+            <span>â—‰</span>
             Commerce Assets
           </div>
 
           <div className="nav-item">
-            <span>↗</span>
+            <span>â†—</span>
             Deployments
           </div>
 
@@ -414,7 +414,7 @@ function UploadProduct() {
           <div>
 
             <div className="eyebrow">
-              ☁ CLOUDINARY VISUAL COMMERCE
+              â˜ CLOUDINARY VISUAL COMMERCE
             </div>
 
             <h1>
@@ -443,7 +443,7 @@ function UploadProduct() {
           <div className="hero-content">
 
             <div className="hero-badge">
-              ✦ AI PRODUCT INTELLIGENCE
+              âœ¦ AI PRODUCT INTELLIGENCE
             </div>
 
             <h2>
@@ -460,17 +460,17 @@ function UploadProduct() {
             <div className="hero-features">
 
               <div>
-                <span>✦</span>
+                <span>âœ¦</span>
                 Visual Scoring
               </div>
 
               <div>
-                <span>◈</span>
+                <span>â—ˆ</span>
                 Commerce Analysis
               </div>
 
               <div>
-                <span>◎</span>
+                <span>â—Ž</span>
                 Multi-channel Assets
               </div>
 
@@ -504,7 +504,7 @@ function UploadProduct() {
           >
 
             <div className="section-label">
-              01 — INPUT
+              01 â€” INPUT
             </div>
 
             <h3>
@@ -521,7 +521,7 @@ function UploadProduct() {
                 <>
 
                   <div className="upload-icon">
-                    ↑
+                    â†‘
                   </div>
 
                   <h4>
@@ -605,7 +605,7 @@ function UploadProduct() {
             >
               {loading
                 ? "Processing Product..."
-                : "Analyze Product →"}
+                : "Analyze Product â†’"}
             </button>
 
           </div>
@@ -616,7 +616,7 @@ function UploadProduct() {
           <div className="preview-card">
 
             <div className="section-label">
-              02 — VISUAL REPRESENTATION
+              02 â€” VISUAL REPRESENTATION
             </div>
 
             <div className="preview-header">
@@ -677,7 +677,7 @@ function UploadProduct() {
         >
 
           <div className="section-label">
-            03 — INTELLIGENCE
+            03 â€” INTELLIGENCE
           </div>
 
           <div className="intelligence-header">
@@ -722,7 +722,7 @@ function UploadProduct() {
 
                   {result
                     ? Number(commerceScore).toFixed(1)
-                    : "—"}
+                    : "â€”"}
 
                   <small>
                     /10
@@ -793,7 +793,7 @@ function UploadProduct() {
                 <div className="waiting-box">
 
                   <span>
-                    ✦
+                    âœ¦
                   </span>
 
                   Analyze your product to generate
@@ -817,7 +817,7 @@ function UploadProduct() {
                         >
 
                           <span>
-                            ✓
+                            âœ“
                           </span>
 
                           {feature}
@@ -847,7 +847,7 @@ function UploadProduct() {
                         >
 
                           <span>
-                            ✓
+                            âœ“
                           </span>
 
                           {feature}
@@ -888,7 +888,7 @@ function UploadProduct() {
 
                   {metric.value !== undefined
                     ? `${metric.value.toFixed(1)}/10`
-                    : "—"}
+                    : "â€”"}
 
                 </div>
 
@@ -991,7 +991,7 @@ function UploadProduct() {
                           >
 
                             <span>
-                              ✓
+                              âœ“
                             </span>
 
                             {item}
@@ -1043,7 +1043,7 @@ function UploadProduct() {
                           >
 
                             <span>
-                              ◆
+                              â—†
                             </span>
 
                             {item}
@@ -1097,7 +1097,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        ✦
+                        âœ¦
                       </span>
 
                       Campaign:
@@ -1109,7 +1109,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        →
+                        â†’
                       </span>
 
                       CTA:
@@ -1138,7 +1138,7 @@ function UploadProduct() {
                           >
 
                             <span>
-                              ◎
+                              â—Ž
                             </span>
 
                             {idea}
@@ -1189,7 +1189,7 @@ function UploadProduct() {
                         >
 
                           <span>
-                            ✓
+                            âœ“
                           </span>
 
                           {item}
@@ -1273,7 +1273,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        ◎
+                        â—Ž
                       </span>
 
                       <strong>
@@ -1287,7 +1287,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        ◈
+                        â—ˆ
                       </span>
 
                       <strong>
@@ -1301,7 +1301,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        ✦
+                        âœ¦
                       </span>
 
                       <strong>
@@ -1315,7 +1315,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        ▶
+                        â–¶
                       </span>
 
                       <strong>
@@ -1369,7 +1369,7 @@ function UploadProduct() {
                           >
 
                             <span>
-                              ✓
+                              âœ“
                             </span>
 
                             {item}
@@ -1391,7 +1391,7 @@ function UploadProduct() {
                   >
 
                     <span>
-                      ✦
+                      âœ¦
                     </span>
 
                     {commerceCopy.socialCaption}
@@ -1408,7 +1408,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        →
+                        â†’
                       </span>
 
                       Ad Headline:
@@ -1420,7 +1420,7 @@ function UploadProduct() {
                     <div className="feature-row">
 
                       <span>
-                        →
+                        â†’
                       </span>
 
                       {commerceCopy.adDescription}
@@ -1468,7 +1468,7 @@ function UploadProduct() {
                             >
 
                               <span>
-                                ◆
+                                â—†
                               </span>
 
                               Mood:
@@ -1497,7 +1497,7 @@ function UploadProduct() {
                             >
 
                               <span>
-                                ✦
+                                âœ¦
                               </span>
 
                               Style:
@@ -1593,7 +1593,7 @@ function UploadProduct() {
                             {strategy.strategy}
                           </strong>
 
-                          {" — "}
+                          {" â€” "}
 
                           {strategy.reason}
 
@@ -1645,7 +1645,7 @@ function UploadProduct() {
                         >
 
                           <span>
-                            →
+                            â†’
                           </span>
 
                           {item}
@@ -1770,7 +1770,7 @@ function UploadProduct() {
           <section className="assets-section">
 
             <div className="section-label">
-              04 — VISUAL STUDIO
+              04 â€” VISUAL STUDIO
             </div>
 
             <div className="intelligence-header">
@@ -1849,3 +1849,4 @@ function UploadProduct() {
 }
 
 export default UploadProduct;
+

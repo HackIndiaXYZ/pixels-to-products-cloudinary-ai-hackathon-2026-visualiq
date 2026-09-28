@@ -1,7 +1,7 @@
 ﻿import { useRef, useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://visualiq-ai-powered-product-intelligence.onrender.com/api";
 
 function App() {
   const fileInputRef = useRef(null);
@@ -56,7 +56,7 @@ function App() {
 
     try {
       const formData = new FormData();
-      formData.append("file", selectedFile);
+      formData.append("image", selectedFile);
       formData.append("upload_preset", "visualiq_products");
 
       const response = await fetch(`${API}/upload`, {
@@ -64,7 +64,15 @@ function App() {
         body: formData,
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get("content-type") || "";
+        if (!contentType.includes("application/json")) {
+          const raw = await response.text();
+          throw new Error(
+            `Backend returned ${response.status} ${response.statusText} instead of JSON: ${raw.slice(0, 120)}`
+          );
+        }
+
+        const data = await response.json();
 
       if (!response.ok || !data.success) {
         throw new Error(data.error || "Analysis failed.");
@@ -92,6 +100,14 @@ function App() {
     const check = async () => {
       try {
         const response = await fetch(`${API}/ai-status/${jobId}`);
+        const contentType = response.headers.get("content-type") || "";
+        if (!contentType.includes("application/json")) {
+          const raw = await response.text();
+          throw new Error(
+            `Backend returned ${response.status} ${response.statusText} instead of JSON: ${raw.slice(0, 120)}`
+          );
+        }
+
         const data = await response.json();
 
         if (data.status === "complete") {
@@ -144,6 +160,14 @@ function App() {
     const check = async () => {
       try {
         const response = await fetch(`${API}/media-status/${jobId}`);
+        const contentType = response.headers.get("content-type") || "";
+        if (!contentType.includes("application/json")) {
+          const raw = await response.text();
+          throw new Error(
+            `Backend returned ${response.status} ${response.statusText} instead of JSON: ${raw.slice(0, 120)}`
+          );
+        }
+
         const data = await response.json();
 
         if (data.status === "complete") {
@@ -620,7 +644,7 @@ function App() {
               </span>
 
               <h3>
-                {intelligence.targetAudience ||
+                {intelligence.targetAudience?.primary ||
                   "Online shoppers"}
               </h3>
 
@@ -641,7 +665,7 @@ function App() {
               </span>
 
               <h3>
-                {intelligence.brandPositioning ||
+                {intelligence.brandPositioning?.position ||
                   "Digital commerce product"}
               </h3>
 
@@ -1046,4 +1070,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
 
