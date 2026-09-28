@@ -345,5 +345,200 @@ VISUALIQ/
 │   │       │   ├── emailRoute.js
 │   │       │   └── resendService.js
 │   │       │
+│   │       ├── publishingEngine.js
+│   │       └── publishingRoute.js
 │   │
+│   ├── routes/
+│   │   ├── cloudinaryTest.js
+│   │   └── upload.js
+│   │
+│   ├── services/
+│   │   ├── commerceFallback.js
+│   │   ├── deepCommerceIntelligence.js
+│   │   ├── productAI.js
+│   │   ├── s3Upload.js
+│   │   ├── visualAssets.js
+│   │   └── visualScore.js
+│   │
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   └── App.css
+│   │
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── docs/
+│   └── images/
+│
+├── .gitignore
+├── README.md
+├── package.json
+└── package-lock.json
 ```
+
+---
+
+# 🔐 SECURITY
+
+VISUALIQ keeps credentials outside the public repository.
+
+Environment variables are excluded through `.gitignore`:
+
+```text
+.env
+.env.*
+!.env.example
+```
+
+Never commit:
+
+* 🔑 AWS access keys
+* 🔑 AWS secret keys
+* 🔑 Cloudinary API secrets
+* 🔑 Gemini API keys
+* 🔑 Resend API keys
+* 🔒 Other private credentials
+
+---
+
+# 💻 LOCAL DEVELOPMENT
+
+## Backend
+
+```bash
+cd backend
+npm install
+node server.js
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+Health endpoint:
+
+```text
+GET /api/health
+```
+
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend runs through Vite.
+
+---
+
+# 🔌 API WORKFLOW
+
+### 📤 Product Upload
+
+```text
+POST /api/upload
+```
+
+The upload workflow:
+
+```text
+Image Upload
+     ↓
+Cloudinary Upload
+     ↓
+AWS S3 Storage
+     ↓
+Visual Scoring
+     ↓
+Commerce Intelligence
+     ↓
+Visual Asset Generation
+     ↓
+AI Analysis Job
+     ↓
+Structured Response
+```
+
+### 📝 Article Draft
+
+```text
+POST /api/publishing/draft
+```
+
+### 📧 Email Publishing
+
+```text
+POST /api/publishing/email/send
+```
+
+---
+
+# 🏆 BUILT FOR AI-POWERED VISUAL COMMERCE
+
+VISUALIQ was designed for the **Pixels to Products — Cloudinary AI Hackathon 2026**.
+
+The project focuses on combining:
+
+**AI + Visual Media + Commerce Intelligence + Cloud Infrastructure + Content Distribution**
+
+rather than building another basic image-generation application.
+
+---
+
+# 🔗 PROJECT
+
+### GitHub Repository
+
+https://github.com/HackIndiaXYZ/pixels-to-products-cloudinary-ai-hackathon-2026-visualiq
+
+### 🌐 Live Dashboard
+
+https://visualiq-ai-hackathon-2026.web.app
+
+### 🎬 Demo Video
+
+https://youtu.be/onyia5zc8Hs
+
+---
+
+# 👩‍💻 BUILT BY
+
+**Sneha S**
+
+B.E. Electronics & Communication Engineering
+
+**AI/ML | Embedded Systems | VLSI**
+
+Building intelligent systems at the intersection of:
+
+**AI | Cloud | Computer Vision | Product Intelligence | Engineering**
+
+---
+
+# 💎 VISUALIQ
+
+> **One product image.
+> Complete visual intelligence.**
+
+**UNDERSTAND → SCORE → OPTIMIZE → CREATE → PUBLISH**
+
+---
+
+<p align="center">
+
+### 🚀 VISUALIQ — Turning Product Images Into Product Intelligence
+
+</p>
